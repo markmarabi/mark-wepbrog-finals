@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 import img1 from '@/assets/mnm.jpg'
 import img2 from '@/assets/linkedin.jpg'
 import img3 from '@/assets/broom1.jpg'
@@ -6,14 +8,9 @@ import img4 from '@/assets/experience.jpg'
 import img5 from '@/assets/education.jpg'
 import img6 from '@/assets/arrow.jpg'
 import img7 from '@/assets/checkmark.jpg'
-import img8 from '@/assets/checkmark.jpg'
-import img9 from '@/assets/checkmark.jpg'
-import img10 from '@/assets/athens.jpg'
 import img8 from '@/assets/renato.jpg'
 import img9 from '@/assets/apc.jpg'
 import img10 from '@/assets/email.jpg'
-
-import { ref } from 'vue
 
 const email = ref('')
 const message = ref('')
@@ -24,7 +21,6 @@ function submitForm() {
   email.value = ''
   message.value = ''
 }
-
 </script>
 
 <template>
@@ -62,6 +58,23 @@ function submitForm() {
           </a>
         </li>
       </ul>
+
+      <!-- Gallery Section -->
+      <section id="gallery">
+        <h2>My Project Gallery</h2>
+        <div class="gallery">
+          <img :src="img1" alt="mnm" />
+          <img :src="img2" alt="linkedin" />
+          <img :src="img3" alt="broom1" />
+          <img :src="img4" alt="experience" />
+          <img :src="img5" alt="education" />
+          <img :src="img6" alt="arrow" />
+          <img :src="img7" alt="checkmark" />
+          <img :src="img8" alt="renato" />
+          <img :src="img9" alt="apc" />
+          <img :src="img10" alt="email" />
+        </div>
+      </section>
     </main>
 
     <section id="contact" style="margin-top: 3rem;">
@@ -87,28 +100,8 @@ function submitForm() {
   </div>
 </template>
 
-<script>
-export default {
-  name: 'App',
-  data() {
-    return {
-      email: '',
-      message: '',
-      successMessage: ''
-    }
-  },
-  methods: {
-    submitForm() {
-      // For now, just show confirmation (you can connect Supabase later)
-      this.successMessage = `Thank you! Your message has been sent.`;
-      this.email = '';
-      this.message = '';
-    }
-  }
-}
-</script>
-
 <style scoped>
+/* Form Styles */
 form {
   max-width: 500px;
   margin: 2rem auto;
@@ -137,5 +130,28 @@ button {
 }
 button:hover {
   background-color: #cc0000;
+}
+
+/* Gallery Styles */
+#gallery {
+  text-align: center;
+  margin: 3rem auto;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
 }
 </style>
