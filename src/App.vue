@@ -30,67 +30,67 @@ function submitForm() {
     </header>
 
     <main>
-      <p>Here are the resources I used to create my personal profile website:</p>
-      <ul>
-        <li>
-          <a href="https://www.youtube.com/watch?v=Jq_Zebxa-YI&t=416s" target="_blank">
-            YouTube Tutorial 1
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2" target="_blank">
-            GitHub Repository
-          </a>
-        </li>
-        <li>
-          <a href="https://tangerine-hummingbird-1479b6.netlify.app/" target="_blank">
-            Netlify Example
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=ldwlOzRvYOU&t=339s" target="_blank">
-            YouTube Tutorial 2
-          </a>
-        </li>
-        <li>
-          <a href="https://fonts.google.com/selection/embed" target="_blank">
-            Google Fonts
-          </a>
-        </li>
-      </ul>
+  <p>Here are the resources I used to create my personal profile website:</p>
+  <ul>
+    <li>
+      <a href="https://www.youtube.com/watch?v=Jq_Zebxa-YI&t=416s" target="_blank">
+        YouTube Tutorial 1
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2" target="_blank">
+        GitHub Repository
+      </a>
+    </li>
+    <li>
+      <a href="https://tangerine-hummingbird-1479b6.netlify.app/" target="_blank">
+        Netlify Example
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/watch?v=ldwlOzRvYOU&t=339s" target="_blank">
+        YouTube Tutorial 2
+      </a>
+    </li>
+    <li>
+      <a href="https://fonts.google.com/selection/embed" target="_blank">
+        Google Fonts
+      </a>
+    </li>
+  </ul>
 
-      <div class="image-gallery">
-        <img :src="img1" alt="My Photo" />
-        <img :src="img2" alt="LinkedIn" />
-        <img :src="img3" alt="Broom" />
-        <img :src="img4" alt="Experience" />
-        <img :src="img5" alt="Education" />
-        <img :src="img6" alt="Arrow" />
-        <img :src="img7" alt="Checkmark" />
-        <img :src="img8" alt="Renato" />
-        <img :src="img9" alt="APC" />
-        <img :src="img10" alt="Email" />
-      </div>
-    </main>
+  <!-- ✅ Image Gallery Section -->
+  <div class="image-gallery">
+    <img :src="img1" alt="My Photo" />
+    <img :src="img2" alt="LinkedIn" />
+    <img :src="img3" alt="Broom" />
+    <img :src="img4" alt="Experience" />
+    <img :src="img5" alt="Education" />
+    <img :src="img6" alt="Arrow" />
+    <img :src="img7" alt="Checkmark" />
+    <img :src="img8" alt="Renato" />
+    <img :src="img9" alt="APC" />
+    <img :src="img10" alt="Email" />
+  </div>
+</main>
 
-    <section id="contact" style="margin-top: 3rem;">
-      <h2>Connect with Me</h2>
-      <form id="contactForm" @submit.prevent="submitForm">
-        <label>Email:</label>
-        <input v-model="email" type="email" placeholder="Enter your email" required />
+<!-- ✅ Contact Form -->
+<section id="contact" style="margin-top: 3rem;">
+  <h2>Connect with Me</h2>
+  <form id="contactForm" @submit.prevent="submitForm">
+    <label>Email:</label>
+    <input v-model="email" type="email" placeholder="Enter your email" required />
 
-        <label>Message:</label>
-        <textarea v-model="message" rows="4" placeholder="Type your message..." required></textarea>
+    <label>Message:</label>
+    <textarea v-model="message" rows="4" placeholder="Type your message..." required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
+    <button type="submit">Send Message</button>
+  </form>
 
-      <p v-if="successMessage" style="color: green; margin-top: 10px;">
-        {{ successMessage }}
-      </p>
-    </section>
-
-    <footer>
+  <p v-if="successMessage" style="color: green; margin-top: 10px;">
+    {{ successMessage }}
+  </p>
+</section>
       <p>&copy; 2025 Mark Lyster Marabi</p>
     </footer>
   </div>
