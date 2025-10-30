@@ -1,4 +1,30 @@
 <script setup>
+import img1 from '@/assets/mnm.jpg'
+import img2 from '@/assets/linkedin.jpg'
+import img3 from '@/assets/broom1.jpg'
+import img4 from '@/assets/experience.jpg'
+import img5 from '@/assets/education.jpg'
+import img6 from '@/assets/arrow.jpg'
+import img7 from '@/assets/checkmark.jpg'
+import img8 from '@/assets/checkmark.jpg'
+import img9 from '@/assets/checkmark.jpg'
+import img10 from '@/assets/athens.jpg'
+import img8 from '@/assets/renato.jpg'
+import img9 from '@/assets/apc.jpg'
+import img10 from '@/assets/email.jpg'
+
+import { ref } from 'vue
+
+const email = ref('')
+const message = ref('')
+const successMessage = ref('')
+
+function submitForm() {
+  successMessage.value = 'Thank you! Your message has been sent.'
+  email.value = ''
+  message.value = ''
+}
+
 </script>
 
 <template>
