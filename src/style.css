@@ -442,7 +442,7 @@ footer p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black
   overflow: hidden;
 }
 
@@ -463,5 +463,5 @@ footer p {
 }
 
 #contact .section_text_p1 {
-  color: white;
+  color: black
 }
