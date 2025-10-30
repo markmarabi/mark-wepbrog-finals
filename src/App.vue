@@ -59,22 +59,18 @@ function submitForm() {
         </li>
       </ul>
 
-      <!-- Gallery Section -->
-      <section id="gallery">
-        <h2>My Project Gallery</h2>
-        <div class="gallery">
-          <img :src="img1" alt="mnm" />
-          <img :src="img2" alt="linkedin" />
-          <img :src="img3" alt="broom1" />
-          <img :src="img4" alt="experience" />
-          <img :src="img5" alt="education" />
-          <img :src="img6" alt="arrow" />
-          <img :src="img7" alt="checkmark" />
-          <img :src="img8" alt="renato" />
-          <img :src="img9" alt="apc" />
-          <img :src="img10" alt="email" />
-        </div>
-      </section>
+      <div class="image-gallery">
+        <img :src="img1" alt="My Photo" />
+        <img :src="img2" alt="LinkedIn" />
+        <img :src="img3" alt="Broom" />
+        <img :src="img4" alt="Experience" />
+        <img :src="img5" alt="Education" />
+        <img :src="img6" alt="Arrow" />
+        <img :src="img7" alt="Checkmark" />
+        <img :src="img8" alt="Renato" />
+        <img :src="img9" alt="APC" />
+        <img :src="img10" alt="Email" />
+      </div>
     </main>
 
     <section id="contact" style="margin-top: 3rem;">
@@ -101,7 +97,6 @@ function submitForm() {
 </template>
 
 <style scoped>
-/* Form Styles */
 form {
   max-width: 500px;
   margin: 2rem auto;
@@ -131,27 +126,16 @@ button {
 button:hover {
   background-color: #cc0000;
 }
-
-/* Gallery Styles */
-#gallery {
-  text-align: center;
-  margin: 3rem auto;
-}
-.gallery {
+.image-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
-.gallery img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-.gallery img:hover {
-  transform: scale(1.05);
+.image-gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 </style>
